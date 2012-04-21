@@ -192,6 +192,7 @@ public class Work {
     		conn.setRequestProperty("Authorization", "Basic " + stringToBase64(auth));
     	conn.setRequestProperty("Content-Type", "application/json");
     	conn.setRequestProperty("Content-Length", Integer.toString(request.getBytes().length));
+    	conn.setRequestProperty("X-Mining-Extensions", "midstate");
     	conn.setAllowUserInteraction(false);
     	conn.setUseCaches(false);
 		conn.setDoOutput(true);
